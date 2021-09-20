@@ -6,9 +6,17 @@ public class Main {
         ContaBancaria correntista2 = new ContaBancaria(78897, 985, "Joana Maria Flor");
         ContaBancaria correntista3 = new ContaBancaria(96321,100, "Paulo Alfredo Maques");
         correntista1.extrato();
+        correntista1.deposito(600);
+        System.out.println("---");
+        correntista1.extrato();
+        System.out.println("---");
+        correntista1.saque(10);
+        correntista1.extrato();
         System.out.println("_____________");
         correntista2.extrato();
         System.out.println("_____________");
         correntista3.extrato();
+        System.out.println("_____________");
+
     }
 }
