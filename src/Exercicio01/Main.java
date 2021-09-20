@@ -15,6 +15,10 @@ public class Main {
 
         System.out.println("_____________");
         carro2.exibeDadosCarro();
-        carro2.descontadoDado(2000);
+        carro2.descontadoDado(5689);
+
+        System.out.println("_____________");
+        carro2.pintura("Verde água");
+
     }
 }
