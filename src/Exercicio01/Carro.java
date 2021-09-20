@@ -28,7 +28,7 @@ public class Carro {
         System.out.println("Peso: "+peso+" kg");
         System.out.println("Fabricante: "+fabricante);
         System.out.println("Cor: "+cor);
-        System.out.println("Valor: " +valor);
+        System.out.println("Valor: R$ " +valor+ " reais");
     }
 }
 
