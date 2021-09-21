@@ -46,12 +46,31 @@ public class Elevador {
         }
     }
 
-    public void Sobe() {
-
-
+    public void Sobe(int subida) { //- Sobe : para subir um andar (não deve subir se já estiver no último andar);
+        if (terreo < qtdTotalAndares) {
+            terreo++;
+        } else {
+            System.out.println("Você está no último andar! Aperte a opção de descer!");
+        }
     }
 
-    public void Desce() {
+    public void Desce(int descida) {
+        if (terreo > 0) {
+            terreo--;
+        } else {
+            System.out.println("Você está no térreo! Aperte a opção de subir!");
+        }
+    }
 
+    public void exibeDados() {
+        System.out.println("_____________________________________________________");
+        System.out.println("O andar atual é: " + terreo);
+        System.out.println("***");
+        System.out.println("O total de andares do prédio é: " + qtdTotalAndares);
+        System.out.println("***");
+        System.out.println("A capacidade máxima do elevador é de " + capacidadeMaxElevador + " pessoas");
+        System.out.println("***");
+        System.out.println("O número atual de pessoas dentro do elevador é: " + qtdPessoasDentro);
+        System.out.println("_____________________________________________________");
     }
 }
