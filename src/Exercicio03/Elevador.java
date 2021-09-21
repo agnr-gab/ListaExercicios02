@@ -33,7 +33,7 @@ public class Elevador {
     }
 
     public void Sobe() {
-        if (qtdAndares < 20){
+        if (qtdAndares < 20) {
 
         }
 
