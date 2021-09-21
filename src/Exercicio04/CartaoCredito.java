@@ -7,4 +7,28 @@ compra caso o limite tenha sido atingido e o imprimeFatura() que imprime na tela
 valor da fatura.
  */
 public class CartaoCredito {
+    double limiteCredito;
+    double saldoFatura;
+    String nomeCliente;
+
+    public CartaoCredito(double limiteCredito, double saldoFatura, String nomeCliente){
+        this.limiteCredito = limiteCredito;
+        this.saldoFatura = saldoFatura;
+        this.nomeCliente = nomeCliente;
+    }
+    public void aumentaLimite(double maisLimite){
+        limiteCredito = limiteCredito + maisLimite;
+
+
+    }
+    public  void diminuiLimite() {
+
+    }
+    public void realizaCompra() {
+
+    }
+    public void imprimeFatura() {
+
+    }
+
 }
