@@ -22,16 +22,25 @@ public class CartaoCredito {
         limiteCredito = limiteCredito + maisLimite;
     }
 
-    public void diminuiLimite() {
-
+    public void diminuiLimite(double menosLimite) {
+        limiteCredito = limiteCredito - menosLimite;
     }
 
-    public void realizaCompra() {
-
+    public void realizaCompra(double compra) {
+        if (limiteCredito >= compra) {
+            saldoFatura = saldoFatura + compra;
+            limiteCredito = limiteCredito - compra;
+        } else {
+            System.out.println("Não possui limite de crédito para realização de compras!");
+        }
     }
 
     public void imprimeFatura() {
+        System.out.println("____Sistema Cartão de Crédito ZuCard____");
+        System.out.println("Cliente " + nomeCliente + " seja bem-vinde!");
         System.out.println("Valor da fatura: R$" + saldoFatura);
+        System.out.println("Limite de Crédito: R$ " + limiteCredito);
+
 
     }
 
