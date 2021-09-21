@@ -31,7 +31,7 @@ public class ContaBancaria {
     public void extrato() {
         System.out.println("Cliente: " + nomeCliente);
         System.out.println("Conta Corrente: " + numeroConta);
-        System.out.println("Saldo disponível: " + saldoConta);
+        System.out.println("Saldo disponível: R$" + saldoConta+ " reais");
 
     }
 }
