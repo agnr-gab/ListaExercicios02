@@ -16,31 +16,34 @@ dentro dele);
  */
 public class Elevador {
     int terreo = 0;
-    int qtdAndares = 20;
-    int capacidadeElevador = 8;
-    int qtdPessoas = 0;
+    int qtdTotalAndares;
+    int capacidadeMaxElevador;
+    int qtdPessoasDentro;
 
-    public void Entra() {
-        if (capacidadeElevador >= 8) {
-            qtdPessoas++;
-        }
+    public Elevador(int terreo, int qtdAndares, int capacidadeElevador, int qtdPessoas) {
+        this.terreo = terreo;
+        this.qtdTotalAndares = qtdAndares;
+        this.capacidadeMaxElevador = capacidadeElevador;
+        this.qtdPessoasDentro = qtdPessoas;
     }
 
-    public void Sai() {
-        if (capacidadeElevador > 0) {
-            qtdPessoas--;
+    public void Entra(int qtdPassageiros) {
+        int passageirosDentro = qtdPassageiros + qtdPessoasDentro;
+        if (passageirosDentro > capacidadeMaxElevador) {
+            System.out.println("Capacidade máxima de pessoas já atingida!");
+            System.out.println("Quantidade de pessoas além do permitido: " + (passageirosDentro - capacidadeMaxElevador));
         }
+    }
+    public void Sai() {
+
     }
 
     public void Sobe() {
-        if (qtdAndares < 20) {
 
-        }
 
     }
 
     public void Desce() {
-        if (qtdAndares > 20) ;
 
     }
 }
