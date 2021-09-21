@@ -20,22 +20,30 @@ public class Elevador {
     int capacidadeMaxElevador;
     int qtdPessoasDentro;
 
-    public Elevador(int terreo, int qtdAndares, int capacidadeElevador, int qtdPessoas) {
+    public Elevador(int terreo, int qtdTotalAndares, int capacidadeMaxElevador, int qtdPessoasDentro) {
         this.terreo = terreo;
-        this.qtdTotalAndares = qtdAndares;
-        this.capacidadeMaxElevador = capacidadeElevador;
-        this.qtdPessoasDentro = qtdPessoas;
+        this.qtdTotalAndares = qtdTotalAndares;
+        this.capacidadeMaxElevador = capacidadeMaxElevador;
+        this.qtdPessoasDentro = qtdPessoasDentro;
     }
 
-    public void Entra(int qtdPassageiros) {
-        int passageirosDentro = qtdPassageiros + qtdPessoasDentro;
-        if (passageirosDentro > capacidadeMaxElevador) {
+    public void Entra(int qtdViajantes) {
+        int totalViajantes = qtdViajantes + qtdPessoasDentro;
+        if (totalViajantes > capacidadeMaxElevador) {
             System.out.println("Capacidade máxima de pessoas já atingida!");
-            System.out.println("Quantidade de pessoas além do permitido: " + (passageirosDentro - capacidadeMaxElevador));
+            System.out.println("Quantidade de pessoas além do permitido: " + (totalViajantes - capacidadeMaxElevador));
+        } else {
+            qtdPessoasDentro = totalViajantes;
         }
     }
-    public void Sai() {
 
+    public void Sai(int qtdViajantes) {
+        int totalViajantes = qtdPessoasDentro - qtdViajantes;
+        if (totalViajantes < 0) {
+            System.out.println("Não tem pessoas tem dentro do elevador para descer!");
+        } else {
+            qtdPessoasDentro = totalViajantes;
+        }
     }
 
     public void Sobe() {
