@@ -1,4 +1,5 @@
 package Exercicio03;
+
 /*
 3. Crie uma classe denominada Elevador para armazenar as informações de um
 elevador dentro de um prédio. A classe deve armazenar o andar atual (térreo = 0),
@@ -14,4 +15,32 @@ dentro dele);
 - Desce : para descer um andar (não deve descer se já estiver no térreo);
  */
 public class Elevador {
+    int terreo = 0;
+    int qtdAndares = 20;
+    int capacidadeElevador = 8;
+    int qtdPessoas = 0;
+
+    public void Entra() {
+        if (capacidadeElevador >= 8) {
+            qtdPessoas++;
+        }
+    }
+
+    public void Sai() {
+        if (capacidadeElevador > 0) {
+            qtdPessoas--;
+        }
+    }
+
+    public void Sobe() {
+        if (qtdAndares < 20){
+
+        }
+
+    }
+
+    public void Desce() {
+        if (qtdAndares > 20) ;
+
+    }
 }
